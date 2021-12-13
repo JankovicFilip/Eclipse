@@ -1,0 +1,10 @@
+package edunova;
+
+public class Pozdrav {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

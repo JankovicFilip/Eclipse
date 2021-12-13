@@ -1,0 +1,20 @@
+package edunova;
+
+public class Pozdrav {
+	/**
+	 * ovo je dokumentacija poslije
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// jedna linija komentar
+		
+		/*
+		 *  ovo je vise 
+		 *  linija
+		 *  koda
+		 *  komentar
+		 */
+
+	}
+
+}
