@@ -17,7 +17,10 @@ public class Z03 {
 				JOptionPane.showInputDialog("Sirina Jame")
 				);
 		
-		System.out.println(duzina_jame*dubina_jame*sirina_jame);
+		double kolicina_zemlje = duzina_jame * dubina_jame * sirina_jame;
+		
+		
+		System.out.println(kolicina_zemlje);
 	}
 
 }

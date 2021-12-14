@@ -4,10 +4,10 @@ import javax.swing.JOptionPane;
 
 public class Z02 {
 	public static void main(String[] args) {
-		double sirina = Double.parseDouble(
+		int sirina = Integer.parseInt(
 				JOptionPane.showInputDialog("Sirina prostora")
 				);
-		double duzina = Double.parseDouble(
+		int duzina = Integer.parseInt(
 				JOptionPane.showInputDialog("Duzina prostora")
 				);
 		
