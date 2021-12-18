@@ -14,11 +14,12 @@ public class Z03 {
 				JOptionPane.showInputDialog("Upisi ponovo true ili false")
 				);
 		
-		if (prvi==drugi) {
-			System.out.println("DA");
-		}else {
-			System.out.println("NE");
-		}
+		System.out.println((prvi==drugi) ? "Da" : "Ne");
+		//if (prvi==drugi) {
+			//System.out.println("DA");
+		//}else {
+			//System.out.println("NE");
+		//}
 	}
 
 }
