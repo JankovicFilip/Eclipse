@@ -14,12 +14,14 @@ public class Z01 {
 				);
 		
 		int zbroj = broj + broj2;
-		if(zbroj%2==0) {
-			System.out.println("Osijek");
+		
+		System.out.println((zbroj%2==0) ? "Osijek" : "Zagreb");
+		//if(zbroj%2==0) {
+			//System.out.println("Osijek");
 			
-		}else {
-			System.out.println("Zagreb");
-		}
+		//}else {
+		//	System.out.println("Zagreb");
+		//}
 	}
 
 }
