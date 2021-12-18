@@ -14,11 +14,11 @@ public class Z02 {
 		int broj3 = Integer.parseInt(
 				JOptionPane.showInputDialog("Unesi cijeli broj treci puta")
 				);
-		if (broj<broj2 && broj<broj3) {
+		if (broj<=broj2 && broj<=broj3) {
 			System.out.println(broj);
-		}else if (broj2<broj && broj2<broj3) {
+		}else if (broj2<=broj && broj2<=broj3) {
 			System.out.println(broj2);
-		}else if (broj3<broj && broj3<broj2) {
+		}else {
 			System.out.println(broj3);
 		}
 			
