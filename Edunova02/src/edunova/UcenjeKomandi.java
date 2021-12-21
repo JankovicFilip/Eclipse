@@ -12,7 +12,7 @@ public class UcenjeKomandi {
 				);
 		
 		System.out.println((dob >= 2000 && rad<=2) ? "Oprosti nemas dovoljno iskustva" : 
-			(dob >= 1990 && dob <= 1999 && rad>3 && rad <5) ? "Imamo poziciju za vas kao middle developer" : 
+			(dob >= 1990 && dob <= 1999 && rad>3 && rad <5) ? "Imamo poziciju za vas kao middle radnika" : 
 			(dob >= 1970 && dob <=1989 && rad >=5) ? "Rado bismo vas zaposlili na nekoj bitnijoj poziciji" : "Molim vas podijelite nam vise informacija o vama");
 		
 		//if (dob >= 2000 && rad<=2) {
