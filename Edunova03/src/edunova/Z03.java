@@ -66,7 +66,7 @@ public class Z03 {
 		}
 		System.out.println(suma);
 		
-		
+		//praksiranje ovoga
 		int i=0;
 		for(;i<10;i++,suma--) {
 			

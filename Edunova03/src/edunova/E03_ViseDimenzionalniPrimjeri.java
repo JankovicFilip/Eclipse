@@ -15,6 +15,8 @@ public class E03_ViseDimenzionalniPrimjeri {
 		
 		int[][][][] vremenskaPromjenaKocke = new int[10][10][10][10];
 		
+		vremenskaPromjenaKocke[9][9][9][9] = 5;
+		
 		
 		// na zadnje indexe po vrijednosti postavite 5
 	

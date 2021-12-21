@@ -47,13 +47,12 @@ public class E01_JednodimenzionalniNiz {
 		// zadnja vrijednost je uvijek .length-1
 		System.out.println(temperature[temperature.length-1]);
 		
-		int[] ocjene = {3,2,4,5,3,1,2,5,6,4};
+		int[] ocjene = {3,2,4,5,3,1,2,5,5,4};
 		System.out.println(Arrays.toString(ocjene));
 		
 		System.out.println(ocjene[ocjene.length-1]);
 		
 		ocjene[ocjene.length-1] =5;
-		
 		
 		
 		
