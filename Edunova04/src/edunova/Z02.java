@@ -32,8 +32,10 @@ public class Z02 {
 				);
 		
 		while (broj2>=10) {
-			//broj2%10;
-			System.out.println(broj2);
+			//broj2/10
+			System.out.println(broj2%10);
+			break;
+			
 		}
 	
 	}
