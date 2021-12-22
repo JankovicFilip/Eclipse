@@ -3,6 +3,8 @@ package edunova;
 import javax.swing.JOptionPane;
 
 public class Z02 {
+	// ovo dovrsiti
+	
 	
 	public static void main(String[] args) {
 		
