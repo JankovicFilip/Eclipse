@@ -40,7 +40,38 @@ public class Matricazadatak {
 					break;
 				}
 			}
+			for(int i=r+1;i<mr;i++) {
+				matrica[i][ms]=v;
+				v++;
+				if(v>red*stupac) {
+					break;
+				}
+			}
 			
+			
+			
+			
+			
+			mr--;
+			ms--;
+			r++;
+			s++;
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+		for(int i=0;i<red;i++) {
+			for(int k=0;k<stupac;k++) {
+				System.out.print(matrica[i][k] + "\t");
+			}
+			System.out.println();
+		}
 			
 			
 			
