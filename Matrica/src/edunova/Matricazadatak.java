@@ -33,6 +33,16 @@ public class Matricazadatak {
 				}
 			}
 			
+			for(int i=s+1;i<=ms;i++) {
+				matrica[r][i]=v;
+				v++;
+				if(v>red*stupac) {
+					break;
+				}
+			}
+			
+			
+			
 			
 		
 		
