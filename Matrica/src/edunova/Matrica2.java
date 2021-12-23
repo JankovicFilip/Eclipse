@@ -2,10 +2,9 @@ package edunova;
 
 import javax.swing.JOptionPane;
 
-public class Matricazadatak {
+public class Matrica2 {
 	
 	public static void main(String[] args) {
-		
 		
 		int red = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redova:"));
 		int stupac = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj stupaca:"));
@@ -17,32 +16,40 @@ public class Matricazadatak {
 		
 		
 		while(v<=red*stupac) {
-			for(int i=ms;i>=s;i--) { // sa dolje desno prema lijevo
-				matrica[mr][i]=v;
+			for(int i=ms;i>=s;i--) {
+				
+				matrica[i][mr]=v;
 				v++;
+				
 				if(v>red*stupac) {
 					break;
 				}
 			}
 			
-			for(int i=mr-1;i>=r;i--) { // sa dolje lijevo prema gore
-				matrica[i][s]=v;
+			for(int i=mr-1;i>=r;i--) {
+				
+				matrica[s][i]=v;
 				v++;
+				
 				if(v>red*stupac) {
 					break;
 				}
 			}
 			
-			for(int i=s+1;i<=ms;i++) { // sa gore lijevo prema desno
-				matrica[r][i]=v;
+			for(int i=s+1;i<=ms;i++) {
+				
+				matrica[i][r]=v;
 				v++;
+				
 				if(v>red*stupac) {
 					break;
 				}
 			}
-			for(int i=r+1;i<mr;i++) { // sa gore desno prema dolje
-				matrica[i][ms]=v;
+			for(int i=r+1;i<mr;i++) {
+				
+				matrica[ms][i]=v;
 				v++;
+				
 				if(v>red*stupac) {
 					break;
 				}
