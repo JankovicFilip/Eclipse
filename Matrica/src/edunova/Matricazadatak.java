@@ -12,40 +12,36 @@ public class Matricazadatak {
 		
 		
 		int[][] matrica = new int [red][stupac];
-		
+		//  suma a    a2           b   b2
 		int v=1, s=0, ms=stupac-1, r=0,mr=red-1;
 		
 		
 		while(v<=red*stupac) {
+			if(v>red*stupac)
+				break;
 			for(int i=ms;i>=s;i--) { // sa dolje desno prema lijevo
 				matrica[mr][i]=v;
 				v++;
-				if(v>red*stupac) {
-					break;
-				}
 			}
-			
+			if(v>red*stupac)
+				break;
 			for(int i=mr-1;i>=r;i--) { // sa dolje lijevo prema gore
 				matrica[i][s]=v;
 				v++;
-				if(v>red*stupac) {
-					break;
-				}
 			}
-			
+			if(v>red*stupac)
+				break;
 			for(int i=s+1;i<=ms;i++) { // sa gore lijevo prema desno
 				matrica[r][i]=v;
 				v++;
-				if(v>red*stupac) {
-					break;
-				}
+				
 			}
+			if(v>red*stupac)
+				break;
 			for(int i=r+1;i<mr;i++) { // sa gore desno prema dolje
 				matrica[i][ms]=v;
 				v++;
-				if(v>red*stupac) {
-					break;
-				}
+			
 			}
 			
 			
