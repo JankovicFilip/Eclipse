@@ -19,26 +19,26 @@ public class Matricazadatak {
 		while(v<=red*stupac) {
 			if(v>red*stupac)
 				break;
-			for(int i=ms;i>=s;i--) { // sa dolje desno prema lijevo
+			for(int i=ms;i>=s;i--) { 
 				matrica[mr][i]=v;
 				v++;
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=mr-1;i>=r;i--) { // sa dolje lijevo prema gore
+			for(int i=mr-1;i>=r;i--) { 
 				matrica[i][s]=v;
 				v++;
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=s+1;i<=ms;i++) { // sa gore lijevo prema desno
+			for(int i=s+1;i<=ms;i++) { 
 				matrica[r][i]=v;
 				v++;
 				
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=r+1;i<mr;i++) { // sa gore desno prema dolje
+			for(int i=r+1;i<mr;i++) { 
 				matrica[i][ms]=v;
 				v++;
 			

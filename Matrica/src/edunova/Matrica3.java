@@ -2,10 +2,10 @@ package edunova;
 
 import javax.swing.JOptionPane;
 
-public class Matrica2 {
+public class Matrica3 {
 	
 	public static void main(String[] args) {
-		
+
 		int red = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj redova:"));
 		int stupac = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj stupaca:"));
 		
@@ -15,57 +15,32 @@ public class Matrica2 {
 		int v=1, s=0, ms=stupac-1, r=0,mr=red-1;
 		
 		
-		while(v<=red*stupac) {
+		while (v<= red*stupac) {
 			if(v>red*stupac)
 				break;
-			for(int i=mr;i>=r;i--) {
-				
-				matrica[i][ms]=v;
-				v++;
-				
+			for(int i=ms;i>=s;i--) {
+				matrica[r][i]=v++;
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=ms-1;i>=s;i--) {
-				
-				matrica[r][i]=v;
-				v++;
-				
+			for (int i=r+1;i<=mr;i++) {
+				matrica[i][s]=v++;
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=r+1;i<=mr;i++) {
-				
-				matrica[i][s]=v;
-				v++;
-				
+			for (int i=s+1;i<=ms;i++) {
+				matrica[mr][i]=v++;
 			}
 			if(v>red*stupac)
 				break;
-			for(int i=s+1;i<=ms-1;i++) {
-				
-				matrica[mr][i]=v;
-				v++;
-				
-			
+			for (int i=mr-1;i>=r+1;i--) {
+				matrica[i][ms]=v++;
 			}
 			
-			
-			
-			
-			
-			r++;
-			ms--;
-			mr--;
 			s++;
-			
-			
-			
-			
-			
-			
-			
-			
+			ms--;
+			r++;
+			mr--;
 		}
 		
 		for(int i=0;i<red;i++) {
@@ -74,18 +49,6 @@ public class Matrica2 {
 			}
 			System.out.println();
 		}
-			
-			
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
