@@ -18,6 +18,7 @@ public class Start {
 	private BigDecimal itemCost = BigDecimal.ZERO;
 	private BigDecimal totalCost = BigDecimal.ZERO;
 
+	// Konstruktor u kojem sam konstruirao svoju main klasu
 	public Start() {
 		products = new ArrayList<>();
 		productsB = new ArrayList<>();
@@ -27,12 +28,15 @@ public class Start {
 
 	}
 
+	// pomocu ove metode pozivam svoj glavni prozor i stavlja se gore naslov, cisto
+	// vizualno
 	private void program() {
 		title();
 		mainWindow();
 
 	}
 
+	// naslov
 	private void title() {
 
 		System.out.println("*****************************");
@@ -41,6 +45,7 @@ public class Start {
 
 	}
 
+	// glavni izbornik, u njemu se ide drugdje gdje trebamo ici
 	private void mainWindow() {
 		System.out.println("\n1. Add product");
 		System.out.println("\n2. Add product to shopping cart");
@@ -70,8 +75,7 @@ public class Start {
 
 	}
 
-	
-
+	// metoda za dodavanje produkta pomocu scannera
 	private void addProduct() {
 		produkt = new Produkt();
 		produkt.setId(Input.inputLong(scstart, "Please choose ID for the product (1-9) !"));
@@ -85,43 +89,51 @@ public class Start {
 
 	}
 
+	// mali workaround za shopping cart pa nisam morao dva modela raditi
 	private void addToShoppingCart() {
 		int i = Input.inputInt(scstart, "Which product would you like to add to your cart?");
 		// Produkt p;
 		produkt = productsB.get(i - 1);
 		produkt.setCartQuantity(Input.inputInt(scstart, "Choose desired amount to add to cart!"));
 
-		
 		for (int j = 0; j < produkt.getCartQuantity() - 1; j++) {
 
-			//products.add(produkt);
+			// products.add(produkt);
 			productsB.add(produkt);
 		}
 		mainWindow();
 	}
 
+	// brisanje sa cart-a
 	private void removeFromShoppingCart() {
 		products.remove(Input.inputInt(scstart, "Please type in the ID of the product you want to remove!") - 1);
 		mainWindow();
 	}
 
+	// checkout metoda koja ispisuje cijenu posbnog produkta te ukupnu cijenu te
+	// isto tako brise sve produkte u trenutnom cart-u
 	private void checkout() {
 		int j = 0;
+
 		for (Produkt p : productsB) {
 			System.out.println(j++ + ". " + p);
+
 		}
 		System.out.println("Total price is: " + getTotalPrice());
-		for(int i = 0; i<= produkt.getCartQuantity()-1;i++) {
-		productsB.remove(produkt);
+
+		for (int i = 1; i <= produkt.getCartQuantity(); i++) {
+			productsB.remove(produkt);
 		}
+
+		// productsB.clear();
+
 		mainWindow();
 	}
 
+	// ukupna cijena za produkte koji se nalaze u kosarici
 	public BigDecimal getTotalPrice() {
 		BigDecimal sum = BigDecimal.ZERO;
-		BigDecimal sum2 = BigDecimal.ZERO;
 
-		BigDecimal totalCost = BigDecimal.ZERO;
 		for (Produkt p : productsB) {
 			sum = sum.add(p.getPrice());
 
